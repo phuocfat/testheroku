@@ -6,6 +6,10 @@ app.get('/', (req, res, next) => {
     const Homepage = path.join(__dirname, 'home.html');
     res.sendFile(Homepage)
 })
+app.get('/home', (req, res, next) => {
+
+    res.json('Hello, this is home page!!!')
+})
 app.listen(process.env.PORT, () => {
     console.log('Server is running')
 })
